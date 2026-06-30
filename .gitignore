@@ -1,0 +1,16 @@
+# Virtual environment — never commit this; it's machine-specific and huge.
+.venv/
+
+# Secrets — the real .env holds API keys. Only .env.example is committed.
+.env
+
+# Python bytecode caches
+__pycache__/
+*.pyc
+
+# Vector store + ingested data (regenerable, can be large)
+chroma_db/
+data/*.pdf
+
+# Eval outputs you may want to keep selectively
+# results/

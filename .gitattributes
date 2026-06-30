@@ -1,0 +1,6 @@
+# Normalize line endings: store text as LF in the repo, check out native on each OS.
+# Prevents noisy "whole file changed" diffs when collaborators are on different OSes.
+* text=auto eol=lf
+
+# Treat these as binary (never normalize)
+*.pdf binary
