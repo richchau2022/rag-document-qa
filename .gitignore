@@ -8,6 +8,10 @@
 __pycache__/
 *.pyc
 
+# IDE config (PyCharm/JetBrains, VS Code)
+.idea/
+.vscode/
+
 # Vector store + ingested data (regenerable, can be large)
 chroma_db/
 data/*.pdf
