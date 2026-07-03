@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-document-qa"
+version = "0.1.0"
+description = "Production RAG document Q&A system with PDF ingestion, vector retrieval, grounded citations, and an evaluation pipeline."
+requires-python = ">=3.12"
+# Runtime deps are pinned in requirements.txt for now; a lock tool (uv/pip-tools)
+# would consolidate these in production.
+
+# Tell setuptools our packages live under src/ (ingestion, retrieval, generation, api, evaluation).
+[tool.setuptools.packages.find]
+where = ["src"]

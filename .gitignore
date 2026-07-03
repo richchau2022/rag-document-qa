@@ -8,6 +8,15 @@
 __pycache__/
 *.pyc
 
+# Packaging / build artifacts (from `pip install -e .`)
+*.egg-info/
+build/
+dist/
+
+# IDE config (PyCharm/JetBrains, VS Code)
+.idea/
+.vscode/
+
 # Vector store + ingested data (regenerable, can be large)
 chroma_db/
 data/*.pdf
