@@ -1,12 +1,16 @@
-# --- Milestone 1: Document Ingestion ---
-# LangChain core + the community package where document loaders live.
-langchain==0.3.27
-langchain-community==0.3.27
-# pypdf is the actual PDF parser that PyPDFLoader wraps.
-pypdf==5.1.0
-# Token-aware text splitting needs a tokenizer; tiktoken gives us real token counts.
-tiktoken==0.8.0
-# Loads secrets (API keys) from a .env file into environment variables.
-python-dotenv==1.0.1
+# --- Core LangChain (1.x line) ---
+langchain==1.3.11
+langchain-community==0.4.2
+langchain-text-splitters==1.1.2
 
-# Later milestones will add: chromadb, anthropic, fastapi, uvicorn, ragas, deepeval
+# --- Milestone 1: Document Ingestion ---
+pypdf==5.1.0          # PDF parser behind PyPDFLoader
+tiktoken==0.8.0       # token counting for chunk sizing
+python-dotenv==1.0.1  # load API keys from .env
+
+# --- Milestone 2: Embeddings + Vector Storage ---
+chromadb==1.5.9            # local persistent vector database
+langchain-chroma==1.1.0    # LangChain <-> Chroma integration
+langchain-voyageai==0.4.0  # Voyage AI embeddings (Anthropic-recommended)
+
+# Later milestones will add: anthropic, fastapi, uvicorn, ragas, deepeval
